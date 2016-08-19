@@ -1,7 +1,7 @@
 {
-	"name" : "node-todo",
-	"version" : "0",
-	"description" : "todo list tutorial app",
+	"name" : "Chargenode",
+	"version" : "0.1",
+	"description" : "D&D character generator app",
 	"main" : "server.js",
 	"author" : "Olli Björkqvist",
 	"dependencies" : {
