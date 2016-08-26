@@ -15,8 +15,8 @@ a single character http://chargenode.herokuapp.com/api/characters/57bf1073849c97
 a random character http://chargenode.herokuapp.com/api/random
 
 ##Hours
-date|hours|
------------
+date|hours|explanation
+----|-----|-----------
 16.8|1h|setup node locally, mbase account
 17.8|2h|crude server, mock model and api to get/post/delete stuff
 18.8|3h|coding the main character model 
