@@ -26,97 +26,86 @@ function rollHP(HD, conB) {
 }
 
 module.exports = Chargen;
-function Chargen(name,charClass) {
+function Chargen(name,charClass, alignment) {
 	this.name = name;
 	this.charClass = charClass;
-	this.stats = {
-	str: xDy(3,6),
-	int: xDy(3,6),
-	wis: xDy(3,6),
-	con: xDy(3,6),
-	dex: xDy(3,6),
-	cha: xDy(3,6)};
+	this.alignment = alignment;
+	
+	this.str= xDy(3,6);
+	this.int= xDy(3,6);
+	this.wis= xDy(3,6);
+	this.con= xDy(3,6);
+	this.dex= xDy(3,6);
+	this.cha= xDy(3,6);
 
-	this.bonuses = {
-	strB: CalculateStatBonus(this.stats.str),
-	intB: CalculateStatBonus(this.stats.int),
-	wisB: CalculateStatBonus(this.stats.wis),
-	conB: CalculateStatBonus(this.stats.con),
-	dexB: CalculateStatBonus(this.stats.dex),
-	chaB: CalculateStatBonus(this.stats.cha)};
+	this.strB= CalculateStatBonus(this.str);
+	this.intB= CalculateStatBonus(this.int);
+	this.wisB= CalculateStatBonus(this.wis);
+	this.conB= CalculateStatBonus(this.con);
+	this.dexB= CalculateStatBonus(this.dex);
+	this.chaB= CalculateStatBonus(this.cha);
 	
 	switch (this.charClass) {
 		case "Cleric":
-			this.saves = {
-				poison: 11,
-				wands: 12,
-				paralysis: 14,
-				dragonbreath: 16,
-				spells: 15,
-			};
+			this.poison= 11;
+			this.wands= 12;
+			this.paralysis= 14;
+			this.dragonbreath= 16;
+			this.spells= 15;
 			this.HD = 6;
 			break;
 		case "Dwarf":
-			this.saves = {
-				poison: 8,
-				wands: 9,
-				paralysis: 10,
-				dragonbreath: 13,
-				spells: 12,
-			};
+			this.poison= 8;
+			this.wands= 9;
+			this.paralysis= 10;
+			this.dragonbreath= 13;
+			this.spells= 12;
 			this.HD = 8;
 			break;
 		case "Elf":
-			this.saves = {
-				poison: 13,
-				wands: 13,
-				paralysis: 13,
-				dragonbreath: 15,
-				spells: 15,
-			};
+			this.poison= 13;
+			this.wands= 13;
+			this.paralysis= 13;
+			this.dragonbreath= 15;
+			this.spells= 15;
 			this.HD = 6;
 			break;
 		case "Fighter":
-			this.saves = {
-				poison: 12,
-				wands: 13,
-				paralysis: 14,
-				dragonbreath: 15,
-				spells: 16,
-			};
+			this.poison= 12;
+			this.wands= 13;
+			this.paralysis= 14;
+			this.dragonbreath= 15;
+			this.spells= 16;
 			this.HD = 8;
 			break;
 		case "Halfling":
-			this.saves = {
-				poison: 8,
-				wands: 9,
-				paralysis: 10,
-				dragonbreath: 13,
-				spells: 12,
-			};
+			this.poison= 8;
+			this.wands= 9;
+			this.paralysis= 10;
+			this.dragonbreath= 13;
+			this.spells= 12;
 			this.HD = 6;
 			break;
 		case "Magic-User":
-			this.saves = {
-				poison: 13,
-				wands: 14,
-				paralysis: 13,
-				dragonbreath: 16,
-				spells: 15,
-			};
+			this.poison= 13;
+			this.wands= 14;
+			this.paralysis= 13;
+			this.dragonbreath= 16;
+			this.spells= 15;
 			this.HD = 4; 
 			break;
 		case "Thief":
-			this.saves = {
-				poison: 13,
-				wands: 14,
-				paralysis: 14,
-				dragonbreath: 16,
-				spells: 15,
-			};
+			this.poison= 13;
+			this.wands= 14;
+			this.paralysis= 14;
+			this.dragonbreath= 16;
+			this.spells= 15;
 			this.HD = 4;
 			break;
 	}
 	
-	this.HP = rollHP(this.HD, this.bonuses.conB);
+	this.HP = rollHP(this.HD, this.conB);
+	this.AC = 9;
+	this.experience = 0;
+	this.level =1;
 }

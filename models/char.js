@@ -13,6 +13,12 @@ module.exports = mongoose.model('Character', {
 	intelligence: Number,
 	wisdom: Number,
 	charisma: Number,
+	str_bonus: Number,
+	dex_bonus: Number,
+	con_bonus: Number,
+	int_bonus: Number,
+	wis_bonus: Number,
+	cha_bonus: Number,
 	armor_class: Number,
 	hit_points: Number,
 });
