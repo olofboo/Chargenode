@@ -2,7 +2,6 @@ language: node_js
 script:
 - npm --silent run lint
 - npm --silent test
-- cat ./coverage/lcov.info | coveralls
 deploy:
   provider: heroku
   api_key:
