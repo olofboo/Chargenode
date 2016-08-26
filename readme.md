@@ -1,3 +1,19 @@
+## Chargenode
+
+Simple node.js RESTful api backend done for a D&D character generator.
+
+For course Node.js ohjelmointiprojekti
+
+Heroku instance can be found at http://chargenode.herokuapp.com
+
+Use Examples:
+
+all characters in the db http://chargenode.herokuapp.com/api/characters
+a single character http://chargenode.herokuapp.com/api/characters/57bf1073849c97310ec022cc
+a random character http://chargenode.herokuapp.com/api/random
+
+##Hours
+
 16.8	1h	setup node locally, mbase account
 17.8	2h	crude server, mock model and api to get/post/delete stuff
 18.8	3h	coding the main character model 
