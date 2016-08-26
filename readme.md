@@ -6,7 +6,7 @@ For course Node.js ohjelmointiprojekti
 
 Heroku instance can be found at http://chargenode.herokuapp.com
 
-Use Examples:
+## Use Examples
 
 all characters in the db http://chargenode.herokuapp.com/api/characters
 a single character http://chargenode.herokuapp.com/api/characters/57bf1073849c97310ec022cc
