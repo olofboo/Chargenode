@@ -1,6 +1,6 @@
 {
 	"name" : "Chargenode",
-	"version" : "0.1",
+	"version" : "1.0.0",
 	"description" : "D&D character generator app",
 	"main" : "server.js",
 	"author" : "Olli Björkqvist",
