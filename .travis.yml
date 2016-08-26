@@ -1,0 +1,12 @@
+language: node_js
+script:
+- npm --silent run lint
+- npm --silent test
+- cat ./coverage/lcov.info | coveralls
+deploy:
+  provider: heroku
+  api_key:
+    secure: S2XBSFRC1ufYa16id0drQ6EsZtUF8kH3zK45M0ZuSGZzzjT0Cc705KaXGThvUn7zIXWnA/8+/IG4yIc6ERvjky07qKhAliAU+9U+UIbC6O2ryK/IgANhzZ9wva+mKM7+VY68CKkQ3w3L+9bJs4GO30PHehwIaYjbmNnFzKosryJhkF1PECR191tQCtRYRJGF0HbQ3vbeJ3zGSXbqQ44YeYbEGNN+utKS2Pw0b8/f/BaPofXCWm/o4B22WURRH9K1PtBoS3z1/bMnKIvf2esQg6z/w0l/ZqwlS3Y7AQDdDr3yvtfQjL22/hycPc/rVmcsLWwpqO/ORrKdOfIeinew2Ag/Vyb+kXLh0FNEs3y4IsYYLcVJo2OBdBU69rYGs/Na8LciRbCD9TtmlwyEAe6g76RSk6QGQNRRWiLvfD1SDRxCf2a1bpRbKedvrp31Id8nAurZhrceuXWPvrbXCTIkP7Rb7Af0mIZajvUybrkrlw78NqxMExVSxQQrLFd4BsWSSkyOxi7Jgvmo4btw9J1QRvxXpzxlZX+haxVPD9jfren/XmJQ7janlxvSjLUHt5WC9S+38Bg1vII4xcQap+A7n//NCcmjdfEmjkwutvTRdGzSEUx5HPOlgQuhaFO0boU5/GAJJV8ZpUCFPEAgM5uH0j2aLZ32PaVsibX+sTnsXHY=
+  app: chargenode
+  on:
+    repo: olofboo/Chargenode
