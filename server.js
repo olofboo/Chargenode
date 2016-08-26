@@ -17,5 +17,5 @@ require('./routes/routes.js')(app);
 
 // get started!
 app.listen(port, function() {
-console.log("Also cocks! (in port " +port +")");
-};
+	console.log("Also cocks! (in port " +port +")");
+});
